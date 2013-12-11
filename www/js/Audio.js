@@ -2,9 +2,9 @@
     
     recordAudio: function (src,maxSeconds) {
         
-        this.message("Recording audio to myrecording.amr");
+        this.message("Recording audio to " + audio.getPlatformSpecificSrcName(src));
 
-        var mediaRec = new Media(src, this.onRecordSuccess, this.onError);
+        var mediaRec = new Media(audio.getPlatformSpecificSrcName(src), this.onRecordSuccess, this.onError);
         var recTime = 0;
         var ms = this.maxSeconds;
         // Record audio
@@ -20,7 +20,32 @@
         }, 1000);
     },
 
-    // onSuccess Callback
+    getPlatformSpecificSrcName: function (src) {
+        /*android
+        blackberry
+        ios
+        symbian
+        webos
+        wp7
+        wp8*/
+        var msg;
+        
+        switch (device.platform)
+        {
+            case "Android":
+                return src + ".amr";
+                break;
+            case "iOS":
+                return "documents://" + src + ".wav";
+                break;
+            default:
+                msg = "ERROR: " + device.platform + " is not recognized in audio.getPlatformSpecificSrcName";
+                this.message(msg);
+                return msg;
+                break;
+        }
+    },
+    // onSuccess Callbacka
     //
     onRecordSuccess: function () {
         audio.message("Recording Stopped");
@@ -40,10 +65,10 @@
     //
     playAudio:function(src) {
 
-        this.message("Playing " + src);
+        this.message("Playing " + audio.getPlatformSpecificSrcName(src));
 
         // Create Media object from src
-        this.my_media = new Media(src, this.onPlaySuccess, this.onError);
+        this.my_media = new Media(audio.getPlatformSpecificSrcName(src), this.onPlaySuccess, this.onError);
 
         // Play audio
         this.my_media.play();

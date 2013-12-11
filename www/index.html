@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="jqm\jquery.mobile-1.3.2.min.css">
     <script src="jqm\jquery-2.0.3.min.js"></script>
     <script src="jqm\jquery.mobile-1.3.2.min.js"></script>
-    <script src="http://192.168.1.100:8081/target/target-script-min.js#anonymous"></script>
+    <script src="http://192.168.1.103:8081/target/target-script-min.js#anonymous"></script>
     <title>Hello World</title>
 </head>
 <body>
@@ -33,7 +33,8 @@
 
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
-
+            <hr />
+            <p id="deviceProperties">Loading device properties...</p>
         </div>
 
         <div data-role="footer">
@@ -158,8 +159,8 @@
         <!-- /header -->
 
         <div data-role="content">
-            <button onclick="audio.recordAudio('documents://helloworld.wav',10);">Record Audio</button>
-            <button onclick="audio.playAudio('documents://helloworld.wav');">Play Audio</button>
+            <button onclick="audio.recordAudio('helloworld',10);">Record Audio</button>
+            <button onclick="audio.playAudio('helloworld');">Play Audio</button>
             <button onclick="audio.pauseAudio();">Pause Playing Audio</button>
             <button onclick="audio.stopAudio();">Stop Playing Audio</button>
             <p id="message">0</p>
