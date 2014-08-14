@@ -103,11 +103,11 @@ jasmine.HtmlReporter = function(_doc) {
 
   self.log = function() {
     var console = jasmine.getGlobal().console;
-    if (console && console.log) {
-      if (console.log.apply) {
-        console.log.apply(console, arguments);
+    if (console && alert) {
+      if (alert.apply) {
+        alert.apply(console, arguments);
       } else {
-        console.log(arguments); // ie fix: console.log.apply doesn't exist on ie
+        alert(arguments); // ie fix: alert.apply doesn't exist on ie
       }
     }
   };
@@ -588,11 +588,11 @@ jasmine.TrivialReporter.prototype.reportSpecResults = function(spec) {
 
 jasmine.TrivialReporter.prototype.log = function() {
   var console = jasmine.getGlobal().console;
-  if (console && console.log) {
-    if (console.log.apply) {
-      console.log.apply(console, arguments);
+  if (console && alert) {
+    if (alert.apply) {
+      alert.apply(console, arguments);
     } else {
-      console.log(arguments); // ie fix: console.log.apply doesn't exist on ie
+      alert(arguments); // ie fix: alert.apply doesn't exist on ie
     }
   }
 };

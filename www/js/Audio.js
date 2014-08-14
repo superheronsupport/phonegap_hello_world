@@ -121,7 +121,7 @@
     },
 
     message: function (msg) {
-        console.log(msg);
+        alert(msg);
         $("#message").text(msg);
     }
     

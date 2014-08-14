@@ -3,7 +3,7 @@
     // Application Constructor
     initialize: function () {
 
-        console.log('GPS Initialized');
+        alert('GPS Initialized');
 
         navigator.geolocation.getCurrentPosition(this.onSuccess, this.onError);
 
