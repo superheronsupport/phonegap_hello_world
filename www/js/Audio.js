@@ -54,7 +54,7 @@
     // onError Callback
     //
     onError: function (error) {
-        //alert('code: '    + error.code    + '\n' +
+        alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     },
 
@@ -121,7 +121,7 @@
     },
 
     message: function (msg) {
-        //alert(msg);
+        alert(msg);
         $("#message").text(msg);
     }
     
