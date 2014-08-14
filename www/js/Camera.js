@@ -7,7 +7,7 @@
     // Application Constructor
     initialize: function () {
 
-        alert('Camera Initialized');
+        //alert('Camera Initialized');
 
         this.pictureSource = navigator.camera.PictureSourceType;
 
@@ -20,7 +20,7 @@
     onPhotoDataSuccess: function (imageData) {
 
         // Uncomment to view the base64-encoded image data
-        alert(imageData);
+        //alert(imageData);
 
         // Get image handle
         //
@@ -40,7 +40,7 @@
     //
     onPhotoURISuccess:function (imageURI) {
         // Uncomment to view the image file URI
-        alert(imageURI);
+        //alert(imageURI);
 
         // Get image handle
         //
@@ -60,7 +60,7 @@
     //
     capturePhoto: function () {
 
-        alert('capture photo');
+        //alert('capture photo');
 
         // Take picture using device camera and retrieve image as base64-encoded string
         navigator.camera.getPicture(this.onPhotoDataSuccess, this.onFail, { quality: 50,
@@ -87,7 +87,7 @@
     // Called if something bad happens.
     //
     onFail: function(message) {
-        alert('Failed because: ' + message);
+        //alert('Failed because: ' + message);
     }
 };
 

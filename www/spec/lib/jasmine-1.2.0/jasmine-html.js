@@ -103,11 +103,11 @@ jasmine.HtmlReporter = function(_doc) {
 
   self.log = function() {
     var console = jasmine.getGlobal().console;
-    if (console && alert) {
-      if (alert.apply) {
-        alert.apply(console, arguments);
+    if (console && //alert) {
+      if (//alert.apply) {
+        //alert.apply(console, arguments);
       } else {
-        alert(arguments); // ie fix: alert.apply doesn't exist on ie
+        //alert(arguments); // ie fix: //alert.apply doesn't exist on ie
       }
     }
   };
@@ -151,7 +151,7 @@ jasmine.HtmlReporter = function(_doc) {
         self.createDom('span', { className: 'version' }, version)),
 
       dom.symbolSummary = self.createDom('ul', {className: 'symbolSummary'}),
-      dom.alert = self.createDom('div', {className: 'alert'}),
+      dom.//alert = self.createDom('div', {className: '//alert'}),
       dom.results = self.createDom('div', {className: 'results'},
         dom.summary = self.createDom('div', { className: 'summary' }),
         dom.details = self.createDom('div', { id: 'details' }))
@@ -240,38 +240,38 @@ jasmine.HtmlReporterHelpers.addHelpers(jasmine.HtmlReporter);jasmine.HtmlReporte
     }
 
     // currently running UI
-    if (isUndefined(this.runningAlert)) {
-      this.runningAlert = this.createDom('a', {href: "?", className: "runningAlert bar"});
-      dom.alert.appendChild(this.runningAlert);
+    if (isUndefined(this.running//alert)) {
+      this.running//alert = this.createDom('a', {href: "?", className: "running//alert bar"});
+      dom.//alert.appendChild(this.running//alert);
     }
-    this.runningAlert.innerHTML = "Running " + this.completeSpecCount + " of " + specPluralizedFor(this.totalSpecCount);
+    this.running//alert.innerHTML = "Running " + this.completeSpecCount + " of " + specPluralizedFor(this.totalSpecCount);
 
     // skipped specs UI
-    if (isUndefined(this.skippedAlert)) {
-      this.skippedAlert = this.createDom('a', {href: "?", className: "skippedAlert bar"});
+    if (isUndefined(this.skipped//alert)) {
+      this.skipped//alert = this.createDom('a', {href: "?", className: "skipped//alert bar"});
     }
 
-    this.skippedAlert.innerHTML = "Skipping " + this.skippedCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all";
+    this.skipped//alert.innerHTML = "Skipping " + this.skippedCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all";
 
-    if (this.skippedCount === 1 && isDefined(dom.alert)) {
-      dom.alert.appendChild(this.skippedAlert);
+    if (this.skippedCount === 1 && isDefined(dom.//alert)) {
+      dom.//alert.appendChild(this.skipped//alert);
     }
 
     // passing specs UI
-    if (isUndefined(this.passedAlert)) {
-      this.passedAlert = this.createDom('span', {href: "?", className: "passingAlert bar"});
+    if (isUndefined(this.passed//alert)) {
+      this.passed//alert = this.createDom('span', {href: "?", className: "passing//alert bar"});
     }
-    this.passedAlert.innerHTML = "Passing " + specPluralizedFor(this.passedCount);
+    this.passed//alert.innerHTML = "Passing " + specPluralizedFor(this.passedCount);
 
     // failing specs UI
-    if (isUndefined(this.failedAlert)) {
-      this.failedAlert = this.createDom('span', {href: "?", className: "failingAlert bar"});
+    if (isUndefined(this.failed//alert)) {
+      this.failed//alert = this.createDom('span', {href: "?", className: "failing//alert bar"});
     }
-    this.failedAlert.innerHTML = "Failing " + specPluralizedFor(this.failedCount);
+    this.failed//alert.innerHTML = "Failing " + specPluralizedFor(this.failedCount);
 
-    if (this.failedCount === 1 && isDefined(dom.alert)) {
-      dom.alert.appendChild(this.failedAlert);
-      dom.alert.appendChild(this.resultsMenu);
+    if (this.failedCount === 1 && isDefined(dom.//alert)) {
+      dom.//alert.appendChild(this.failed//alert);
+      dom.//alert.appendChild(this.resultsMenu);
     }
 
     // summary info
@@ -280,12 +280,12 @@ jasmine.HtmlReporterHelpers.addHelpers(jasmine.HtmlReporter);jasmine.HtmlReporte
   };
 
   this.complete = function() {
-    dom.alert.removeChild(this.runningAlert);
+    dom.//alert.removeChild(this.running//alert);
 
-    this.skippedAlert.innerHTML = "Ran " + this.runningSpecCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all";
+    this.skipped//alert.innerHTML = "Ran " + this.runningSpecCount + " of " + specPluralizedFor(this.totalSpecCount) + " - run all";
 
     if (this.failedCount === 0) {
-      dom.alert.appendChild(this.createDom('span', {className: 'passingAlert bar'}, "Passing " + specPluralizedFor(this.passedCount)));
+      dom.//alert.appendChild(this.createDom('span', {className: 'passing//alert bar'}, "Passing " + specPluralizedFor(this.passedCount)));
     } else {
       showDetails();
     }
@@ -588,11 +588,11 @@ jasmine.TrivialReporter.prototype.reportSpecResults = function(spec) {
 
 jasmine.TrivialReporter.prototype.log = function() {
   var console = jasmine.getGlobal().console;
-  if (console && alert) {
-    if (alert.apply) {
-      alert.apply(console, arguments);
+  if (console && //alert) {
+    if (//alert.apply) {
+      //alert.apply(console, arguments);
     } else {
-      alert(arguments); // ie fix: alert.apply doesn't exist on ie
+      //alert(arguments); // ie fix: //alert.apply doesn't exist on ie
     }
   }
 };

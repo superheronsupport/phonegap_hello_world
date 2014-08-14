@@ -30,7 +30,7 @@
     // onError: Failed to get the heading
     //
     onError:function(compassError) {
-        alert('Compass error: ' + compassError.code);
+        //alert('Compass error: ' + compassError.code);
     }
 
 };

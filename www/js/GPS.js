@@ -3,7 +3,7 @@
     // Application Constructor
     initialize: function () {
 
-        alert('GPS Initialized');
+        //alert('GPS Initialized');
 
         navigator.geolocation.getCurrentPosition(this.onSuccess, this.onError);
 
@@ -26,7 +26,7 @@
     // Called if something bad happens.
     //
     onError: function(message) {
-        alert('Failed because: ' + message);
+        //alert('Failed because: ' + message);
     }
 
 };

@@ -20,7 +20,7 @@ var app = {
         // Update DOM on a Received Event
     receivedEvent: function (id) {
 
-        alert('Device Ready');
+        //alert('Device Ready');
 
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -33,6 +33,6 @@ var app = {
                             'Device Platform: ' + device.platform + '<br />' +
                             'Device UUID: ' + device.uuid + '<br />' +
                             'Device Version: ' + device.version + '<br />');
-        alert('devicePlatform: ' + device.platform);
+        //alert('devicePlatform: ' + device.platform);
     }
 };
