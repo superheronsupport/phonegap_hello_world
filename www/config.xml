@@ -8,16 +8,14 @@
         Your Company
     </author>
     
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.geolocation" />  
-    <!--<gap:plugin name="org.apache.cordova.file" />-->
-    <!--<gap:plugin name="org.apache.cordova.file-transfer" />-->
-    <gap:plugin name="org.apache.cordova.device" />
-    <!--<gap:plugin name="org.apache.cordova.inappbrowser" />-->
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <!--<gap:plugin name="nl.x-services.plugins.socialsharing" />
-    <gap:plugin name="org.devgeeks.Canvas2ImagePlugin" />-->
+      
+      <plugin name="cordova-plugin-media" source="npm" />
+  <plugin name="cordova-plugin-device" source="npm" />
+  <plugin name="cordova-plugin-device-orientation" source="npm" />
+  <plugin name="cordova-plugin-file" source="npm" />
+  <plugin name="cordova-plugin-file-transfer" source="npm" />
+  <plugin name="cordova-plugin-geolocation" source="npm" />
+
 
   <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
