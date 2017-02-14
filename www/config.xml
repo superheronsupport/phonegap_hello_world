@@ -17,12 +17,8 @@
   <plugin name="cordova-plugin-file-transfer" source="npm" />
   <plugin name="cordova-plugin-geolocation" source="npm" />
 
-   <gap:config-file platform="android" parent="/manifest">
-    <application android:debuggable="false" />
-   </gap:config-file>
-        
-    <preference name="orientation" value="default" />
-    <preference name="target-device" value="universal" />
+  <preference name="orientation" value="default" />    
+  <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
@@ -62,7 +58,6 @@
  
     <gap:platform name="ios" />
     <gap:platform name="android" />
-
 
   <access origin="*" />
   
