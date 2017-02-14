@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.yourcompany.phonegap_hello_world" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+  
     <name>phonegap_hello_world</name>
     <description>
       phonegap_hello_world
@@ -7,20 +8,20 @@
     <author email="You@yourcompany.com" name="http://yourcompany.com">
         Your Company
     </author>
-    <plugin name="cordova-plugin-camera" source="npm">
-    <variable name="CAMERA_USAGE_DESCRIPTION" value="This app would like to access your camera to collect photos along with data." />
-    <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="This app would like to access your photo library." />
-  </plugin>
-    
-      <plugin name="cordova-plugin-media" source="npm" />
+  
+  <plugin name="cordova-plugin-camera" source="npm"/>
+  <plugin name="cordova-plugin-media" source="npm" />
   <plugin name="cordova-plugin-device" source="npm" />
   <plugin name="cordova-plugin-device-orientation" source="npm" />
   <plugin name="cordova-plugin-file" source="npm" />
   <plugin name="cordova-plugin-file-transfer" source="npm" />
   <plugin name="cordova-plugin-geolocation" source="npm" />
 
-
-  <preference name="orientation" value="default" />
+   <gap:config-file platform="android" parent="/manifest">
+    <application android:debuggable="false" />
+   </gap:config-file>
+        
+    <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
@@ -61,11 +62,8 @@
  
     <gap:platform name="ios" />
     <gap:platform name="android" />
-    <gap:platform name="winphone" />
+
 
   <access origin="*" />
   
-       <gap:config-file platform="android" parent="/manifest">
-    <application android:debuggable="false" />
-  </gap:config-file>
 </widget>
