@@ -8,7 +8,12 @@
         Your Company
     </author>
     
-      
+    
+      <gap:config-file platform="android" parent="/manifest">
+    <application android:debuggable="false" />
+  </gap:config-file>
+    
+    
       <plugin name="cordova-plugin-media" source="npm" />
   <plugin name="cordova-plugin-device" source="npm" />
   <plugin name="cordova-plugin-device-orientation" source="npm" />
