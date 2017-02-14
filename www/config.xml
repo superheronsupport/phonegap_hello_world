@@ -7,12 +7,6 @@
     <author email="You@yourcompany.com" name="http://yourcompany.com">
         Your Company
     </author>
-    
-    
-      <gap:config-file platform="android" parent="/manifest">
-    <application android:debuggable="false" />
-  </gap:config-file>
-    
     <plugin name="cordova-plugin-camera" source="npm">
     <variable name="CAMERA_USAGE_DESCRIPTION" value="This app would like to access your camera to collect photos along with data." />
     <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="This app would like to access your photo library." />
@@ -71,4 +65,7 @@
 
   <access origin="*" />
   
+       <gap:config-file platform="android" parent="/manifest">
+    <application android:debuggable="false" />
+  </gap:config-file>
 </widget>
